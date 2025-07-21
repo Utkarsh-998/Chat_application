@@ -9,7 +9,6 @@ const OtherUsers = ({ user }) => {
   const handleSelectedUser = (user) => {
     dispatch(setSelectedUser(user));
   };
-  // console.log(selectedUser);
   return (
     <div className="  gap-3 mb-6 flex flex-row">
       <div

@@ -26,8 +26,6 @@ const MessageContainer = () => {
           }
         );
 
-        // console.log(res, "from message container");
-
         dispatch(setMessages(res.data));
       } catch (error) {
         console.log("Failed to load messages:", error);

@@ -8,7 +8,6 @@ const Messages = () => {
   const scrollRef = useRef();
   const { selectedUser } = useSelector((state) => state.user);
   const { messages } = useSelector((state) => state.message);
-  // console.log(messages)
 
   useGetRealtime(); // ✅ proper hook usage at the top
 
