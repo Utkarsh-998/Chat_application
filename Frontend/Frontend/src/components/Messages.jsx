@@ -1,7 +1,7 @@
 // components/Messages.jsx
 import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
-import useGetRealtime from "../hooks/useGetRealtime"; // ✅ renamed to camelCase
+import useGetRealtime from "../hooks/useGetRealtime.jsx"; // ✅ renamed to camelCase
 import SingleMessage from "./SingleMessage";
 
 const Messages = () => {
