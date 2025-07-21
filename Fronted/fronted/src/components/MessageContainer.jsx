@@ -20,7 +20,7 @@ const MessageContainer = () => {
 
       try {
         const res = await axios.get(
-          `http://localhost:8080/api/v1/message/get/${selectedUser._id}`,
+          `https://chat-app-t7q5.onrender.com/api/v1/message/get/${selectedUser._id}`,
           {
             withCredentials: true,
           }

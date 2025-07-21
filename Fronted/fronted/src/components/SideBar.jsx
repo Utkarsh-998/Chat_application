@@ -14,7 +14,7 @@ const SideBar = () => {
   const navigate = useNavigate();
   const HandleLogout = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/v1/user/logout");
+      const res = await axios.get("https://chat-app-t7q5.onrender.com/api/v1/user/logout");
       toast.success(res.data.message);
       navigate("/login");
     } catch (error) {

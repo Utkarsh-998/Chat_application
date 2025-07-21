@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("http://localhost:8080", {
+      const socket = io("https://chat-app-t7q5.onrender.com", {
         withCredentials: true,
       });
       dispatch(setSocket(socket));
