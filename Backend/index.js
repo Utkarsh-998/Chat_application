@@ -18,10 +18,28 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
+// ✅ Allow both local and deployed frontend
+const allowedOrigins = [
+  "http://localhost:5173"
+  // "https://chat-application-fronted.onrender.com"
+];
+
 app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
 }));
+
+// Optional: Log origin for debugging
+app.use((req, res, next) => {
+  console.log("Origin:", req.headers.origin);
+  next();
+});
 
 // Routes
 app.use("/api/v1/user", userRoute);

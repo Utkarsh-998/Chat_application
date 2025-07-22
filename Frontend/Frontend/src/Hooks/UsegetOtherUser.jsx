@@ -10,7 +10,7 @@ const UsegetOtherUser = () => {
     const fetchOtherUser = async () => {
       try {
         axios.defaults.withCredentials = true;
-        const res = await axios.get("https://chat-app-t7q5.onrender.com/api/v1/user/");
+        const res = await axios.get("http://localhost:8080/api/v1/user/");
 
         // Add avatar field dynamically based on gender
         const usersWithAvatars = res.data.map((user) => ({

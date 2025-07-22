@@ -14,7 +14,7 @@ const SendInput = () => {
 
     try {
       const res = await axios.post(
-        `https://chat-app-t7q5.onrender.com/api/v1/message/send/${selectedUser?._id}`,
+        `http://localhost:8080/api/v1/message/send/${selectedUser?._id}`,
         { message }, // ✅ wrap it in an object
         {
           headers: {

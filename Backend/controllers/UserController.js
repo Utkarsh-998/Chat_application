@@ -32,8 +32,11 @@ export const register = async (req, res) => {
       message: "Account created Successfully",
       success: true,
     });
-  } catch (error) {
-    return res.error(error.message);
+  }  catch (error) {
+  console.error("Register error:", error.message);
+  return res.status(500).json({ message: "Internal Server Error" });
+
+
   }
 };
 export const login = async (req, res) => {
